@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Player & Master Table</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <div class="main-container" id="capture-area">
+    <header>
+      <h1>Player & Master Table</h1>
+    </header>
+
+    <div class="entry-section">
+      <div class="entry-row">
+        <div class="box-container">
+          <div class="image-box" onclick="document.getElementById('input-1').click()">
+            <input type="file" id="input-1" hidden accept="image/*" onchange="handleFile(1, event)">
+            <div id="preview-1" class="preview-content">Click to Upload Image</div>
+          </div>
+          <button class="btn-mini" onclick="resetBox(1)">Reset Box</button>
+        </div>
+        <div class="text-container">
+          <textarea id="note-1" placeholder="Enter text here..."></textarea>
+          <button class="btn-mini" onclick="resetText(1)">Clear Text</button>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="box-container">
+          <div class="image-box" onclick="document.getElementById('input-2').click()">
+            <input type="file" id="input-2" hidden accept="image/*" onchange="handleFile(2, event)">
+            <div id="preview-2" class="preview-content">Click to Upload Image</div>
+          </div>
+          <button class="btn-mini" onclick="resetBox(2)">Reset Box</button>
+        </div>
+        <div class="text-container">
+          <textarea id="note-2" placeholder="Enter text here..."></textarea>
+          <button class="btn-mini" onclick="resetText(2)">Clear Text</button>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="box-container">
+          <div class="image-box" onclick="document.getElementById('input-3').click()">
+            <input type="file" id="input-3" hidden accept="image/*" onchange="handleFile(3, event)">
+            <div id="preview-3" class="preview-content">Click to Upload Image</div>
+          </div>
+          <button class="btn-mini" onclick="resetBox(3)">Reset Box</button>
+        </div>
+        <div class="text-container">
+          <textarea id="note-3" placeholder="Enter text here..."></textarea>
+          <button class="btn-mini" onclick="resetText(3)">Clear Text</button>
+        </div>
+      </div>
+
+      <div class="entry-row">
+        <div class="box-container">
+          <div class="image-box" onclick="document.getElementById('input-4').click()">
+            <input type="file" id="input-4" hidden accept="image/*" onchange="handleFile(4, event)">
+            <div id="preview-4" class="preview-content">Click to Upload Image</div>
+          </div>
+          <button class="btn-mini" onclick="resetBox(4)">Reset Box</button>
+        </div>
+        <div class="text-container">
+          <textarea id="note-4" placeholder="Enter text here..."></textarea>
+          <button class="btn-mini" onclick="resetText(4)">Clear Text</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-controls">
+      <div class="dice-panel">
+        <button class="die-btn" id="w20" onclick="roll(20)">W 20</button>
+        <button class="die-btn" id="w8" onclick="roll(8)">W 8</button>
+        <button class="die-btn" id="w6" onclick="roll(6)">W 6</button>
+        <div class="dice-footer">
+          <button class="btn-mini full-width" onclick="resetDice()">Reset Dice</button>
+          <button class="save-btn" onclick="saveArchive()">SAVE</button>
+        </div>
+      </div>
+
+      <div class="universal-panel">
+        <div class="uni-header">
+          <button onclick="setUniMode('image')">Image Mode</button>
+          <button onclick="setUniMode('text')">Text Mode</button>
+        </div>
+        <div id="uni-content" class="uni-display">
+          <div id="uni-image-area" onclick="document.getElementById('uni-file').click()">
+            <input type="file" id="uni-file" hidden accept="image/*" onchange="handleUniFile(event)">
+            <div id="uni-preview">Choose Mode or Upload</div>
+          </div>
+          <textarea id="uni-text" class="hidden" placeholder="Universal Notes..."></textarea>
+        </div>
+        <button class="btn-mini full-width" onclick="resetUni()">Reset Field</button>
+      </div>
+
+      <div class="calc-panel">
+        <div id="calc-display">0</div>
+        <div class="calc-grid">
+          <button onclick="calcPress('7')">7</button><button onclick="calcPress('8')">8</button><button onclick="calcPress('9')">9</button><button class="op" onclick="calcPress('/')">/</button>
+          <button onclick="calcPress('4')">4</button><button onclick="calcPress('5')">5</button><button onclick="calcPress('6')">6</button><button class="op" onclick="calcPress('*')">*</button>
+          <button onclick="calcPress('1')">1</button><button onclick="calcPress('2')">2</button><button onclick="calcPress('3')">3</button><button class="op" onclick="calcPress('-')">-</button>
+          <button class="reset-calc" onclick="resetCalc()">C</button><button onclick="calcPress('0')">0</button><button class="op" onclick="calcPress('=')">=</button><button class="op" onclick="calcPress('+')">+</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="global-reset" onclick="resetAll()">RESET EVERYTHING</button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
